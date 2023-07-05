@@ -35,3 +35,24 @@ phrase = 'Hello, World!'
 no_duplicate = remove_duplicates(phrase)
 
 print(no_duplicate)
+
+
+'''
+3) Encontre a substring palindroma mais longa na string abaixo:
+'''
+
+def sub_palindrome(string):
+    palindrome = ''
+    lenght = len(string)
+    for i in range(lenght): # loop que itera sobre o tamanho da palavra fornecida
+        for j in range(i+1, lenght+1): #loop que itera sobre o tamanho restrito da palavra fornecida
+            substring = string[i:j] #variável que recebe o tamanho restrito da palavra fornecida
+            if substring == substring[::-1]: #condicional: checa se variável = de trás pra frente, confirma que é palíndromo
+                if len(substring) > len(palindrome): # condicional para verificar se o palíndromo atual é maior que o último verificado
+                    palindrome = substring
+    return palindrome
+
+
+a = 'babad'
+
+print(sub_palindrome(a))
