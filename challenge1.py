@@ -7,7 +7,8 @@ import re
 
 
 def reverse_phrase(phrase):
-    words = phrase.split(' ')  # junta cada palavra em uma lista, usando como separador para identificação dos items o espaço (' ')
+    # junta cada palavra em uma lista, usando como separador para identificação dos items o espaço (' ')
+    words = phrase.split(' ')
 
     # Junta cada item da lista criada em uma string,
     reversed_sentence = ' '.join(reversed(words))
@@ -16,9 +17,21 @@ def reverse_phrase(phrase):
     return reversed_sentence
 
 
+print('----- Execução do desafio 1 -----')
+print('')
 a = 'Hello, world! OpenAI is amazing.'
-
+print(a)
 print(reverse_phrase(a))
+b = 'Omg, this phrase is reversed!'
+print(b)
+print(reverse_phrase(b))
+c = 'Estou muito empolgado com este desafio!'
+print(c)
+print(reverse_phrase(c))
+print('')
+print('---------- Fim do desafio 1 ----------')
+
+print('')
 
 '''
 2) Remova todos os caracteres duplicados na string abaixo:
@@ -33,66 +46,122 @@ def remove_duplicates(phrase):
     return new_phrase
 
 
-phrase = 'Hello, World!'
+print('----- Execução do desafio 2 -----')
+print('')
+a = 'Hello, World!'
+print(a)
+print(remove_duplicates(a))
+b = 'Goodbye horses'
+print(b)
+print(remove_duplicates(b))
+c = 'Merci beaucoup!'
+print(c)
+print(remove_duplicates(c))
+print('')
+print('---------- Fim do desafio 2 ----------')
 
-no_duplicate = remove_duplicates(phrase)
-
-print(no_duplicate)
-
+print('')
 
 '''
 3) Encontre a substring palindroma mais longa na string abaixo:
 '''
 
+
 def sub_palindrome(string):
     palindrome = ''
     lenght = len(string)
-    for i in range(lenght): # loop que itera sobre o tamanho da palavra fornecida
-        for j in range(i+1, lenght+1): #loop que itera sobre o tamanho restrito da palavra fornecida
-            substring = string[i:j] #variável que recebe o tamanho restrito da palavra fornecida
-            if substring == substring[::-1]: #condicional: checa se variável = de trás pra frente, confirma que é palíndromo
-                if len(substring) > len(palindrome): # condicional para verificar se o palíndromo atual é maior que o último verificado
+    for i in range(lenght):  # loop que itera sobre o tamanho da palavra fornecida
+        # loop que itera sobre o tamanho restrito da palavra fornecida
+        for j in range(i+1, lenght+1):
+            # variável que recebe o tamanho restrito da palavra fornecida
+            substring = string[i:j]
+            # condicional: checa se variável = de trás pra frente, confirma que é palíndromo
+            if substring == substring[::-1]:
+                # condicional para verificar se o palíndromo atual é maior que o último verificado
+                if len(substring) > len(palindrome):
                     palindrome = substring
     return palindrome
 
 
+print('----- Execução do desafio 3 -----')
+print('')
 a = 'babad'
-
+print(a)
 print(sub_palindrome(a))
+b = 'bobobao'
+print(b)
+print(sub_palindrome(b))
+c = 'radares'
+print(c)
+print(sub_palindrome(c))
+print('')
+print('---------- Fim do desafio 3 ----------')
+print('')
 
 '''
 4) Coloque em maiúscula a primeira letra de cada frase na string:
 '''
 
 # Usando o módulo regular expressions 'import re'
+
+
 def capitalize_first(string):
     capitalized_sentence = ''
-    li = re.split(r'(?<=[.!?])\s', string) # Delimitando os caracteres de pontuação e criando a lista que vai armazenar cada frase
+    # Delimitando os caracteres de pontuação e criando a lista que vai armazenar cada frase
+    li = re.split(r'(?<=[.!?])\s', string)
 
     capitalized_list = []
     for i in range(0, len(li)):
-        capitalized_list.append(li[i].capitalize()) # Tornando maiúscula cada frase separada e armazenando numa lista
+        # Tornando maiúscula cada frase separada e armazenando numa lista
+        capitalized_list.append(li[i].capitalize())
 
-    capitalized_sentence = ' '.join(capitalized_list) # Juntando as frases da lista criada anteriormente
+    # Juntando as frases da lista criada anteriormente
+    capitalized_sentence = ' '.join(capitalized_list)
     return capitalized_sentence
 
 
+print('----- Execução do desafio 4 -----')
+print('')
 a = "hello. how are you? i'm fine, thank you."
+print(a)
 print(capitalize_first(a))
-
+b = 'omg! someone capitalize this! urgent.'
+print(b)
+print(capitalize_first(b))
+c = 'na internet? pontuação correta e letra maiúscula é raridade!'
+print(c)
+print(capitalize_first(c))
+print('')
+print('---------- Fim do desafio 4 ----------')
+print('')
 
 '''
 5) Verifique se a string é um anagrama de um palíndromo:
 '''
 # Utilizando o módulo counter que conta valores e cria um dicionário a partir disso
 
+
 def anagram_palindrome(string):
-    char_values = Counter(string) #transformando a string em um dicionário com a quantidade de cada letra estabelecida
-    odd_count = 0 # Quantidade de caracteres ímpares na string
-    for odd in char_values.values(): # checa quantidade de cada caractere. Se for impar a contagem sobe +1
+    # transformando a string em um dicionário com a quantidade de cada letra estabelecida
+    char_values = Counter(string)
+    odd_count = 0  # Quantidade de caracteres ímpares na string
+    for odd in char_values.values():  # checa quantidade de cada caractere. Se for impar a contagem sobe +1
         if odd % 2 != 0:
             odd_count += 1
-    return odd_count <= 1 # Retorna True para anagrama de um palíndromo se a contagem de caracteres ímpares seja = ou < que 1
+    # Retorna True para anagrama de um palíndromo se a contagem de caracteres ímpares seja = ou < que 1
+    return odd_count <= 1
 
-string = 'racecar'
-print(anagram_palindrome(string))
+
+print('----- Execução do desafio 5 -----')
+print('')
+a = 'racecar'
+print(a)
+print(anagram_palindrome(a))
+b = 'anagram'
+print(b)
+print(anagram_palindrome(b))
+c = 'bombom'
+print(c)
+print(anagram_palindrome(c))
+print('')
+print('---------- Fim do desafio 5 ----------')
