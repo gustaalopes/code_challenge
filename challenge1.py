@@ -20,14 +20,14 @@ def reverse_phrase(phrase):
 print('----- Execução do desafio 1 -----')
 print('')
 a = 'Hello, world! OpenAI is amazing.'
-print(a)
-print(reverse_phrase(a))
+print('Teste 1: ', a)
+print('Output teste 1: ', reverse_phrase(a))
 b = 'Omg, this phrase is reversed!'
-print(b)
-print(reverse_phrase(b))
+print('Teste 2: ', b)
+print('Output teste 2: ', reverse_phrase(b))
 c = 'Estou muito empolgado com este desafio!'
-print(c)
-print(reverse_phrase(c))
+print('Teste 3: ', c)
+print('Output teste 3: ', reverse_phrase(c))
 print('')
 print('---------- Fim do desafio 1 ----------')
 
@@ -49,14 +49,14 @@ def remove_duplicates(phrase):
 print('----- Execução do desafio 2 -----')
 print('')
 a = 'Hello, World!'
-print(a)
-print(remove_duplicates(a))
+print('Teste 1: ', a)
+print('Output teste 1: ', remove_duplicates(a))
 b = 'Goodbye horses'
-print(b)
-print(remove_duplicates(b))
+print('Teste 2: ', b)
+print('Output teste 2: ', remove_duplicates(b))
 c = 'Merci beaucoup!'
-print(c)
-print(remove_duplicates(c))
+print('Teste 3: ', c)
+print('Output teste 3: ', remove_duplicates(c))
 print('')
 print('---------- Fim do desafio 2 ----------')
 
@@ -86,14 +86,14 @@ def sub_palindrome(string):
 print('----- Execução do desafio 3 -----')
 print('')
 a = 'babad'
-print(a)
-print(sub_palindrome(a))
+print('Teste 1: ', a)
+print('Output teste 1: ', sub_palindrome(a))
 b = 'bobobao'
-print(b)
-print(sub_palindrome(b))
+print('Teste 2: ', b)
+print('Output teste 2: ', sub_palindrome(b))
 c = 'radares'
-print(c)
-print(sub_palindrome(c))
+print('Teste 3: ', c)
+print('Output teste 3: ', sub_palindrome(c))
 print('')
 print('---------- Fim do desafio 3 ----------')
 print('')
@@ -123,14 +123,14 @@ def capitalize_first(string):
 print('----- Execução do desafio 4 -----')
 print('')
 a = "hello. how are you? i'm fine, thank you."
-print(a)
-print(capitalize_first(a))
+print('Teste 1: ', a)
+print('Output teste 1: ', capitalize_first(a))
 b = 'omg! someone capitalize this! urgent.'
-print(b)
-print(capitalize_first(b))
+print('Teste 2: ', b)
+print('Output teste 2: ', capitalize_first(b))
 c = 'na internet? pontuação correta e letra maiúscula é raridade!'
-print(c)
-print(capitalize_first(c))
+print('Teste 3: ', c)
+print('Output teste 3: ', capitalize_first(c))
 print('')
 print('---------- Fim do desafio 4 ----------')
 print('')
@@ -155,13 +155,15 @@ def anagram_palindrome(string):
 print('----- Execução do desafio 5 -----')
 print('')
 a = 'racecar'
-print(a)
-print(anagram_palindrome(a))
+print('Teste 1: ', a)
+print('Output teste 1: ', anagram_palindrome(a))
 b = 'anagram'
-print(b)
-print(anagram_palindrome(b))
+print('Teste 2: ', b)
+print('Output teste 2: ', anagram_palindrome(b))
 c = 'bombom'
-print(c)
-print(anagram_palindrome(c))
+print('Teste 3: ', c)
+print('Output teste 3: ', anagram_palindrome(c))
 print('')
 print('---------- Fim do desafio 5 ----------')
+
+input('Pressione enter para fechar a aplicação.')
